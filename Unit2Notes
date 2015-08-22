@@ -1,0 +1,42 @@
+- Data Modeling = The process of creating schema to describe XML document
+
+- Schema = A set of rules which describe elements and entities
+
+Example: 
+
+- In a RealEstate.xml file, you specify elements like address, house and rooms. 
+
+- The name, term and type which you specify to verify your new XML verification is called the schema of your XML.
+
+
+- Different schema languages: Documnt Type Definition (DTD) and XML Schema Definition (XSD).
+
+DTD Example: 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT vehicle (car+)>
+<!ELEMENT car (tire)>
+<!ATTLIST car name CDATA #REQUIRED>
+<!ATTLIST car model CDATA #REQUIRED>
+
+
+
+XSD: 
+
+- Used to create schema for XML document. 
+- It has the same purpose as DTD except is much easier to understand
+- It defines the data type for the elements for different types, such as text, integer, number, date, etc.
+
+
+XSD Example: 
+
+- <?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org">
+<xsd:element name="book">
+	<xsd:complexType>
+		<xsd:sequrence>
+			<Xsd:element name="name" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+</xsd:schema>
