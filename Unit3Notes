@@ -1,0 +1,149 @@
+Cascaded Style Sheet (CSS) = provides user with font, color, alignment, etc.
+
+- Create XML document and refer to CSS file in your XML document. (Add to the beginning of the file)
+
+Example: 
+<?xml-stylesheet type="text/css" href="filename.css"?>
+
+
+Example CSS document (book.css):
+
+messages {
+	display:blockl width:400px; color:red; text-align:center; 
+}
+
+book { 
+display:block, margin-bottom:10pt; margin-left:0;
+}
+
+Name {
+	color: blue; font-size: 20pt;
+}
+
+
+--------Displaying XML document using Eclipse--------
+
+1. Create a project
+2. Add your book.xml file
+3. Add your book.css file
+4. Right mouse click on book.xml file and open with web browser
+
+
+
+
+--------CSS LANGUAGE CONSTRUCT--------
+
+- Selector = a CSS construct which associates CSS styling with part of XML documents. It creates a link between document and set of CSS styles
+
+{attribute1:value1; attribute2:value2;...}
+
+
+
+--------Selector Kinds--------
+
+1. Element Type = a selector with associate CSS style
+
+Example: 
+
+author {
+	display:list-item; color:black;margin-left:20pt;list-style-type:circle;
+}
+
+
+2. Attribute Class = a selector with associate elements of specified class with attributes
+
+Example: 
+
+(In CSS file)
+summary.review {
+	display:block; color:blue; font-size:18pt;
+}
+
+(In XML file)
+<summary class="review">Good book to read</summary>
+
+
+
+
+3. Attribute ID = a selector with associate element with ID that identifies a specific attribute
+
+Example: 
+
+(In CSS file)
+#comment {
+	color:red; font-style:italic; font-family:Arial;
+}
+
+(In XML file)
+<message id="comment>Cheap price</message>
+
+
+
+
+- Style Declaration = Each style is defined as property and value (property is the name of the style, value is the type of the style)
+
+
+- Display properties in CSS = block, list-item, title, none, inline
+
+
+Size properties in CSS = px, pt, in, cm, mm
+
+
+
+- Formatting Declaration = used to control the display appearance of XML contents
+
+Example (border): 
+
+border-xxxx (xxxx can be left, right, top, bottom, color, style)
+
+
+border-color:red; border-style:solid; border:3px solid black; border-style:double;
+
+
+
+
+- Color Properties = sets the color of the content
+
+Example: 
+color:red;  OR color:rgb(250,0,253);
+
+
+
+
+- Blackground-Color Properties = could be used to declare background color for the contents
+
+Example: 
+
+background-color:green;
+background-color:#0000FF;
+
+(In CSS file)
+
+messages {
+	display:block; background-color:#999978;
+}
+
+
+(In XML file)
+
+<messages>List of books for sale </message>
+
+
+
+
+- Font Properties
+
+font-xxxx; (style, weight - bold, size, family)
+
+Example: 
+
+font-family:Arial; font-size:20pt;
+
+
+
+
+- Alignment Properties
+text-align:left; text-indent:30pt;
+
+
+
