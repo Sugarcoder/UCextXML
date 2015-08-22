@@ -1,0 +1,94 @@
+- Namespace = a mechanism to provide unique identifier for elements and attributes within a specified scope
+
+
+- Namespace uses internet mechanism to locate the resources using URI and URN.
+
+
+- URI (Universal Resource Identifier) = creates a unique name for physical location of the resource on the internet. 
+
+URI Example: 
+
+<carcatalog xlmns:cr="http://..../cars">
+<cr:car cr:name="Mustang">Ford Company</cr:car>
+
+
+
+- URN (Universal Resource Name) = provides a persistence name for a resource
+
+Example: 
+
+urn:ISBN: 12:978-1
+<bookcatalog xmlns:bk="urn:ucsc-ext:books">
+
+
+
+
+--------Scope of Namespace--------
+
+- The scope refers to the location within its element hierarchy (each element is called a node)
+
+- CSS and XML nodes are within the 'scope' of the 'name node' (Tree: name with css and xml under it)
+
+
+- Global scope = scope with all of the documents, such as the root node 'books'
+
+- Local scope = scope with part of the documents, such as 'name' (under 'books')
+
+
+Namespace Example: 
+
+<!--Default Namespace--> 
+
+<books> 
+	<messages> 
+		List of books for sale
+	</messages>
+
+	<book>
+		<name publisher="Bloomsbury">Bloomsbury</name>
+		<author>Author: JK Rowling</author>
+		<title>Title: Harry Potter</title>
+		<price> Price: $20.00</price>
+	</book>
+</books>
+
+
+
+Namespace declaration in CSS: 
+
+- @namespace prefix url or uri
+- @namespace bn url
+
+
+Selector declaration: 
+
+- prefix | selector { attribute1: value1;...}
+- bn | messages { display:block; width:400px;}
+
+- Browser: 
+- prefix\:selector {...}
+- bn\:book{display:block;margin-bottom:10pt;}
+
+
+
+Namespace in CSS Example: 
+
+@CHARSET "ISO-8859-1";
+@namespace bn url (http://...);
+@namespace        (http://...);
+
+ | messages {
+	display:block; width:400px; text-align:center;
+}
+
+bn | message { color:red;}
+	 message { color: green;}
+
+  | book {
+	display:block; margin-bottom: 10pt;
+}
+
+
+bn | name { color:blue; font-size:20pt; }
+	 name { color:green; font-sze:20pt; }
+
