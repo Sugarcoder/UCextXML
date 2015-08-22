@@ -1,0 +1,109 @@
+
+- XML supports different types: HTTP, HTTPS, MIME
+
+XML LANGUAGE CONSTRUCT
+
+--------Element--------
+
+- Used to describe a piece of info (ex. car, book, dog, etc)
+- Starts with <car>, ends with </car>
+
+- Element Hierarchy (example):
+<car> 
+	<model></model>
+	<color />
+</car>
+
+
+
+--------Non-Empty Element--------
+
+- Element which contains data within the opening and closing tags
+
+Example: 
+
+<vehicle>
+	<car model="corvette">
+		<engine types="v8" cylinder="6" power="3.2" />
+	</car>
+</vehicle>
+
+
+
+--------Attribute--------
+
+- Attribute is a piece of info with an opening element tag
+- It contains a name and value, separated by "="
+
+Example: 
+
+<car name="Chevy" model="Malibu" build="2010"/>
+
+
+XML RULES
+
+- Tag names
+- Opening and closing tags
+- Nested tags
+- Attributes
+- Document (Every doc must have a root element)
+
+
+- Root element = a single element in a document with contains all the other elements
+
+
+- XML Symbols (Entity) = a special predefined symbol with XML, which identify characters, symbols, resources and even the file. 
+
+Example: 
+&lt;("<"), &qt;(">"), &quot;(")
+
+
+
+- XML Declaration = the first line for each XML document
+
+Example: 
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+- CDATA = XML uses Character Data Section (CDATA) to store blocks of text in the XML document
+
+
+
+- Comment = Comment starts with <!-- and ends with --> 
+
+
+--------Creating an XML document--------
+
+1. You can use a simple text editor
+
+2. You can use an XML editor 
+
+- EXchanger XML Lite 3.2 = http://www.freexmleditor.com
+
+- Eclipse 
+
+- Save document as .xml
+
+
+
+--------Adding Elements to XML document using Eclipse--------
+
+- Right mouse click on "vehicle" element (select Add -> Child -> car). A car element will be added to the bottom of the document 
+
+
+
+--------Displaying XML document using Eclipse--------
+
+- Click on "Source" tab under editor (next to "Design" tab)
+
+OR
+
+- Right mouse click on car.xml and select 'Open with...(browser)'
+
+
+
+--------Displaying error in XML document using Eclipse--------
+
+- Display error = right mouse click on car.xml -> validate
+
