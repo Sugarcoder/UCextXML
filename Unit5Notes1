@@ -1,0 +1,63 @@
+XSL
+- created by using XML markup language
+- can format and display XML documents just like CSS does
+
+
+--------XSL Components--------
+
+XSLT (XSL Transformation)
+
+- A language implemented in XML and used to process multiple XML documents
+- It is supported by web browsers 
+- For formatting and presentation, it can use CSS, which is supported by most browsers
+
+
+XSL-FO (XSL Formatting Object)
+- A language implemented in XML and used to format and present XML documents
+- useful for styling and displaying XML documents
+- Recommended for printing or viewing by W3C
+
+
+
+--------How XSL Works---------
+
+Typical XSL application: 
+- XML document -> XSLT -> XSL-FO (XML instance) -> XSL-FO (presentation) -> PDF
+
+
+How XSL works? 
+- It processes all the nodes in the XML document tree based on the specificed pattern matching
+
+
+Pattern Matching
+- It is the process of using patterns to find the node in the tree, and apply the XSL style sheet to that node
+
+
+XSL Processor
+- The XSL processor analyzes the template and assocuated patterns to process XSL stule sheets for different parts of the tree
+
+
+Result Tree
+- When rules of the temple is applied to the contents of the element, the result is generated to a tree called "Result Tree". 
+- The result might contain XML, HTML, text, or XSL-FO.
+
+
+XML to XML Transformation
+- If the Result Tree contains XML, that means there is transformation of one form of XML to another. 
+
+
+XML to HTML (XHTML)
+- If the Result Tree contains HTML, there is transformation of XML to HTML
+- XHTML can be viewed in a browser
+
+
+XML to Text Transformation
+- If a Result Tree contains text, then it transforms from XML to Text.
+
+
+XSL Processor Logic
+- Returns compleged Result Tree
+- Display in browser: Result Tree might be ready for display in a browser if it is XHTML. If it is XML, then we might use CSS or XSL-FO to prepare it for display.
+
+
+
