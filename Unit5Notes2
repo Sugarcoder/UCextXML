@@ -1,0 +1,121 @@
+--------How to use XSLT--------
+
+- Build XSLT using the following common elements: 
+
+xsl: apply-templates = This element applies a template to style sheet
+Example: <xsl:apply-templates select="title" />
+
+
+********************
+
+
+xsl:value-of = This element inserts the value of element or attributes in the specified location defined by "select"
+
+Examples: 
+
+XSLT
+
+<xsl:template match="author">
+	<xsl:value-of select="." />
+</xsl:template>
+
+
+XML
+
+<book> <name> XML </name> <author> Carey </author>
+</book>
+
+
+Output would be 'Carey'
+
+
+************************
+
+xsl:if = This element provides condition logic
+
+Example: 
+
+XSLT
+
+<xsl:if match="@publisher=McGraw-Hill" >
+	<xsl:apply-templates select="book" />
+</xsl:if>
+
+
+XML
+
+<book publisher="McGraw-Hill">
+<name>Java</name>
+<author>John White</author>
+</book>
+
+
+Output would be "Java"  "John White"
+
+
+
+************************
+
+
+xsl:for-each = This element loops through all elements in the document
+
+Examples: 
+
+XSLT
+
+<xsl:for-each select="books/book">
+<h1>
+	<xsl:value-of select="@publisher" />, <xsl:value-of select="@year" />
+</h1>
+<h2> <xsl:value-of select="title" />  </h2>
+</xsl:for-each>
+
+
+XML
+
+<book publisher="McGraw-Hill" year="2010">
+<name> Java </name>   <title>  Advanced Java </title>
+</book> 
+
+
+Output would be in XHTML Code: 
+
+<h1> McGraw-Hill, 2010 </h1>
+<h2> Advanced Java </h2> 
+
+
+
+
+----------Build XSLT Logic----------
+
+Patterns = Patterns are used to determine what portion of XML document should be passed to specified template for transformation. 
+
+Built-in templates:
+
+text(), comment(), processing-instruction()
+<xsl:template match="comment() | processing-instruction()" />
+
+<xsl:template-match="text() | @" />   <xsl:value-of select="." />
+</xsl:template>
+
+
+Expression = It is similar to patterns, but is also capabl of invoking its own processing or built-in functions (ex. sum(), output() to all elements)
+
+<xsl:value-of select="sum(@price)" />
+
+
+
+----------Example Exercise----------
+
+
+- Create filename.xml: add xsl processing instructions
+<?xml-stylesheet type="text/xsl"  href="books.xml" ?>
+
+- Open file with any browser.
+
+(See "Books Example")
+
+
+*****************************
+
+
