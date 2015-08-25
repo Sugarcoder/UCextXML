@@ -9,11 +9,11 @@ Example:
 Example CSS document (book.css):
 
 messages {
-	display:blockl width:400px; color:red; text-align:center; 
+	display:block; width:400px; color:red; text-align:center; 
 }
 
 book { 
-display:block, margin-bottom:10pt; margin-left:0;
+	display:block; margin-bottom:10pt; margin-left:0;
 }
 
 Name {
