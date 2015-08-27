@@ -1,0 +1,67 @@
+----------XML----------
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="book.css"?>
+
+<bookstore>
+  	<h1>List of Book Sales</h1>
+  	<li><book>
+    	<title>Harry Potter and the Sorcerer's Stone</title>
+    	<author>Author: J.K. Rowling</author>
+    	<year>Publish Year: 1997</year>
+    	<price>Price: $29.95 USD</price>
+  	</book>
+    
+  	<book>
+  		<title>Hunger Games</title>
+    	<author>Author: Suzanne Collins</author>
+    	<year>Publish Year: 2008</year>
+    	<price>Price: $39.95 USD</price>
+  	</book>
+  
+  	<book>
+  		<title>Game of Thrones</title>
+  		<author>Author: George R.R. Martin</author>
+  		<year>Publish Year: 1996</year>
+  		<price>Price: $16.95 USD</price>
+  	</book></li>
+  
+</bookstore>
+
+
+
+
+----------CSS----------
+
+book {
+	outline-color: red;
+}
+
+
+h1 {
+	display:block; 
+	font-family:Arial; 
+	color:#FF0000; 
+	font-size:20pt;
+
+    border: 3px solid #0000FF;
+    padding: 15px; 
+    width: 280px;
+    height: 25px; 
+}
+
+title {
+	font-family:Arial;
+	font-weight:bold; 
+	font-size:18px;
+	font-style:bold;
+	color:green; 
+	margin-left:0;
+	
+}
+
+author, price, year {
+	display:list-item;
+	list-style-type:circle;
+}
