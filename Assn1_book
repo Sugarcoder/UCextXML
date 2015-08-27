@@ -1,0 +1,9 @@
+----------XML----------
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This app only shows the xml of a Car. There is no style added to it.-->
+
+<car make="Toyota" model="Prius" color="Pearl White" year="2015" engine="v8" cylinder="4">Toyota Prius</car>
+
+
