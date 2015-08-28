@@ -1,0 +1,98 @@
+NAMESPACE
+
+- A namespace is a defined collection of element and attribute names. 
+
+- Applying a namespace to an XML document involves 2 steps: 
+1. Declaring the namespace
+2. Identifying the elements and attributes within the document that belong to that namespace.
+
+
+- To declare a namespace, add the following attribute to an element within an XML document: 
+
+xmlns:prefix="uri"
+
+
+Example: 
+
+(a namespace within the 'model' element)
+
+<model xlmns:mod="http://www.jacksmith.com/models">
+
+
+
+- To declare a default namespace: xmlns="uri"
+
+
+- A type of URI is a URN (Uniform Resource Name). A URN provides a persistent name for a resource, independent of that resource's location.
+
+
+urn:NID:NSS
+
+NID = the namespace identifier
+NSS = a text string specific to that namespace.
+
+
+Example: 
+
+urn:isbn:0-619-01969-7
+
+
+
+----------Applying a Namespace to Elements----------
+
+- To apply an XML namespace, you give elements and attributes qualified names. 
+
+- A qualified name consist of 2 parts: the namespace prefix (that identifies the namespace) and the local part (that identifies the element within that namespace).
+
+<prefix:element> ... </prefix:element>
+
+Example: 
+
+<mode model xlmns:mod="http://jacksmith.com/models">
+	<mod:title>Laser Printing</mod:title>
+	<mod:description>Prints models using lasers</mod:description>
+</mod:model>
+
+
+
+
+----------Working with Attributes----------
+
+- The syntax to qualify an attribute is <element prefix:attribute="value">...</element>
+
+- Prefix is the namespace prefix.
+
+- Attribute is the attribute name.
+
+
+
+
+----------CSS----------
+
+- To declare a namespace in a style sheet, add: 
+
+@namespace prefix url(uri);
+
+
+- 'prefix' is the namespace refix and uri is the URI of the namespace.
+
+
+Example: 
+
+@namespace mod url(http://jacksmith.com/models);
+
+
+
+- Once you declared a namespace in a style sheet, you can associate selectors with that namespace by adding the namespace prefix to each selector name using this syntax:
+
+prefix|selector {attribute1:value1; attribute2:value2;...}
+
+Example: 
+
+mod|title {width: 150px}
+
+mod|* {font-size: 12pt}   * is for the whole document
+
+
+*|title {width: 150px}   * will set any element named 'title' to 150px
+
