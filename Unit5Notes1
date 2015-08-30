@@ -42,7 +42,7 @@ Result Tree
 - The result might contain XML, HTML, text, or XSL-FO.
 
 
-XML to XML Transformation
+XML to XSL Transformation
 - If the Result Tree contains XML, that means there is transformation of one form of XML to another. 
 
 
