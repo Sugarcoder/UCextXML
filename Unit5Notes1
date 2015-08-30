@@ -26,7 +26,7 @@ Typical XSL application:
 
 
 How XSL works? 
-- It processes all the nodes in the XML document tree based on the specificed pattern matching
+- It processes all the nodes in the XML document tree based on the specific pattern matching
 
 
 Pattern Matching
@@ -34,7 +34,7 @@ Pattern Matching
 
 
 XSL Processor
-- The XSL processor analyzes the template and assocuated patterns to process XSL stule sheets for different parts of the tree
+- The XSL processor analyzes the template and associated patterns to process XSL style sheets for different parts of the tree
 
 
 Result Tree
