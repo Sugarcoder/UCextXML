@@ -56,7 +56,7 @@ XML to Text Transformation
 
 
 XSL Processor Logic
-- Returns compleged Result Tree
+- Returns completed Result Tree
 - Display in browser: Result Tree might be ready for display in a browser if it is XHTML. If it is XML, then we might use CSS or XSL-FO to prepare it for display.
 
 
