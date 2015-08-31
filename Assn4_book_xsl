@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+							  xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Transfer this HTML to XHTML for display -->
+
+<xsl:template match="/">
+
+	<html> 
+		<head> 
+			<title>List of Books For Sale</title> 
+		</head>
+		<body style="background-color:ivory">
+		
+			<h1>List of Books For Sale</h1>
+		
+			<!-- This is the template logic for the book elements 
+			when several nodes match an XPath expression. -->
+			
+			<xsl:for-each select="bookstore/li/book">
+				<xsl:apply-templates select="title"/>
+				<xsl:apply-templates select="author"/>
+				<xsl:apply-templates select="year"/>
+				<xsl:apply-templates select="price"/>
+			</xsl:for-each>
+
+		</body>
+	</html>
+
+	</xsl:template>
+	
+	
+<!-- templates for the title, author, year and price elements--> 
+
+	<xsl:template match="title">
+		<div style="font:arial; font-weight:bold; border:solid; border-color:blue; color:red; margin-left:20pt;">
+			<xsl:value-of select="."/> 
+		</div>
+	</xsl:template>
+
+	<xsl:template match="author">
+		<div style="display:list-item; color:black; margin-left:40pt;">
+			<xsl:value-of select="."/> 
+		</div>
+	</xsl:template>
+
+	<xsl:template match="year">
+		<div style="display:list-item; color:black; margin-left:40pt;">
+			<xsl:value-of select="."/>
+		</div>
+	</xsl:template>
+
+
+	<xsl:template match="price">
+		<div style="display:list-item; color:black; margin-left:40pt;">
+			<xsl:value-of select="."/>
+		</div>
+	</xsl:template>
+
+
+</xsl:stylesheet>
+	
