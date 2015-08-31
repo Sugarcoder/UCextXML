@@ -1,0 +1,26 @@
+XSLT (Extensible Stylesheet Language Transformations) = used to transform the contents of an XML document into another document format.
+
+
+- An XLT is itself an XML document with elements, attributes and processing instructions from the XSLT vocabulary.
+
+
+
+How to convert XML to XSLT
+
+- Translate a source document into a result document.
+
+- To perform this translation, you need an XSLT processor.
+
+
+
+Attaching an XSLT Style Sheet: 
+
+- The syntax of the processing instruction:
+<?xml-stylesheet type="text/xml" href="url" ?>
+
+
+
+Applying a Template
+
+- To apply a template: 
+<xsl:apply-templates select="expression" />

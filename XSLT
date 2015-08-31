@@ -1,3 +1,0 @@
-XSLT (Extensible Stylesheet Language Transformations) = used to transform the contents of an XML document into another document format.
-
-- An XLT is itself an XML document with elements, attributes and processing instructions from the XSLT vocabulary.
