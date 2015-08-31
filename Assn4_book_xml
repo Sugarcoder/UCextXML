@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="book.xsl" ?>
+
+<!-- This is a list of books for sale, with several elements under the bookstore node. -->
+
+<bookstore>
+  	<h1>List of Books for Sale</h1>
+  	<li>
+  	<book>
+    	<title>Title: Harry Potter and the Sorcerer's Stone</title>
+    	<author>Author: J.K. Rowling</author>
+    	<year>Publish Year: 1997</year>
+    	<price>Price: $29.95 USD</price>
+  	</book>
+    
+  	<book>
+  		<title>Title: Hunger Games</title>
+    	<author>Author: Suzanne Collins</author>
+    	<year>Publish Year: 2008</year>
+    	<price>Price: $39.95 USD</price>
+  	</book>
+  
+  	<book>
+  		<title>Title: Game of Thrones</title>
+  		<author>Author: George R.R. Martin</author>
+  		<year>Publish Year: 1996</year>
+  		<price>Price: $16.95 USD</price>
+  	</book>
+  	</li>
+  
+</bookstore>
